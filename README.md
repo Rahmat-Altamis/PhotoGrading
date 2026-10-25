@@ -44,8 +44,8 @@ If you prefer to clone the repository and run the application yourself:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Rahmat-Altamis/ImageRater.git
-   cd ImageRater
+   git clone https://github.com/Rahmat-Altamis/PhotoGrading.git
+   cd PhotoGrading
    ```
 
 2. Run the setup script for your operating system.
@@ -148,7 +148,6 @@ Here's the catalog of classification codes, so you won't be confused when editin
 ## Dependencies
 
 The Python dependencies are listed in [`requirements.txt`](./requirements.txt). The setup scripts install the required packages and prepare the environment.
-
 Python must be installed to run the application from source. The AppImage is intended for Linux users who want to run the packaged application without manually installing the Python dependencies.
 
 ## License

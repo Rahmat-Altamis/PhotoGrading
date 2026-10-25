@@ -14,16 +14,16 @@ I'm currently using Arch Linux, and I'm too lazy to run a VM just to compile sep
 
 ### Linux (AppImage)
 
-1. Download the AppImage from [GitHub Releases](https://github.com/Rahmat-Altamis/PhotoGrading/releases/tag/V1.0.0.0).
+1. Download the AppImage from [GitHub Releases](https://github.com/Rahmat-Altamis/PhotoGrading/releases/tag/V1.0.0.7).
 2. Open a terminal in the directory where you downloaded the file.
 3. Make the AppImage executable and run it:
 
    ```bash
-   chmod +x ImageRater-x86_64.AppImage
-   ./ImageRater-x86_64.AppImage
+   chmod +x Photograding-x86_64.AppImage
+   ./Photograding-x86_64.AppImage
    ```
 
-   If the downloaded file has a different name, replace `ImageRater-x86_64.AppImage` with its actual filename.
+   If the downloaded file has a different name, replace `Photograding-x86_64.AppImage` with its actual filename.
 
 **Alternative: Using the file manager**
 

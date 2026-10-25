@@ -1,6 +1,6 @@
-# ImageRater
+# PhotoGrading
 
-Hello everyone good morning/afternoon/evening, so what is ImageRater? well let me tell a story first, a few years ago when im still a child, i love photography, but im so lazy to pick up the best photo for each and each, well its 5 years ago and now we have AI, NICE what if ai rate the photos for its best use?? well thats why im building this
+Hello everyone good morning/afternoon/evening, so what is PhotoGrading? well let me tell a story first, a few years ago when im still a child, i love photography, but im so lazy to pick up the best photo for each and each, well its 5 years ago and now we have AI, NICE what if ai rate the photos for its best use?? well thats why im building this
 
 ## App Demo
 ![preview](image.png)

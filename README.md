@@ -1,49 +1,79 @@
 # PhotoGrading
 
-Hello everyone good morning/afternoon/evening, so what is PhotoGrading? well let me tell a story first, a few years ago when im still a child, i love photography, but im so lazy to pick up the best photo for each and each, well its 5 years ago and now we have AI, NICE what if ai rate the photos for its best use?? well thats why im building this
+Hello everyone, good morning/afternoon/evening! So, what is PhotoGrading? Well, let me tell a story first. A few years ago, when I was still a child, I loved photography, but I was too lazy to pick the best photos one by one. Well, that was 5 years ago, and now we have AI. NICE! What if AI could rate photos and help me choose their best use? That's why I'm building this.
 
 ## App Demo
-![preview](image.png)
-[demo video (click to watch i cant display it in readme)](./demo.webm)
+
+![PhotoGrading preview](image.png)
+
+[Watch the demo video](./demo.webm)
 
 ## Installation
 
-im in Arch Linux currently, and im lazy to run my VM just for compiling exe/deb so i compile it as appimage which is realy nice, how to run?
+I'm currently using Arch Linux, and I'm too lazy to run a VM just to compile separate Windows and Debian packages. So, I built the application as an AppImage, which is pretty convenient.
 
-- just download the app [here](https://github.com/Rahmat-Altamis/PhotoGrading/releases/tag/V1.0.0.0)
-- Open a terminal in the directory where you downloaded the file.
-  Make the AppImage executable and run it:
+### Linux (AppImage)
 
-  chmod +x ImageRater.AppImage
-  ./ImageRater.AppImage
+1. Download the AppImage from [GitHub Releases](https://github.com/Rahmat-Altamis/PhotoGrading/releases/tag/V1.0.0.0).
+2. Open a terminal in the directory where you downloaded the file.
+3. Make the AppImage executable and run it:
 
-  - Alternative: Using the file manager
-    Right-click the downloaded AppImage, open Properties → Permissions, enable Allow executing file as program, then double-click the file to launch it.
+   ```bash
+   chmod +x ImageRater-x86_64.AppImage
+   ./ImageRater-x86_64.AppImage
+   ```
 
-Note: The exact permission option may vary depending on your Linux desktop environment.
-- set ur key
-- select the folder with the photo you wanna short
-- press grade it
-- after some waiting the results will come out
-- it would also reccomend to rename, just press yes and it will be renamed by it grade edit suggestion and types
+   If the downloaded file has a different name, replace `ImageRater-x86_64.AppImage` with its actual filename.
 
-IF you are not lazy and choose to pull the repo:
-- pull this repo
-- IF in windows click in run.bat it will install it for you
-- IF in linux run 'chmod +x run.sh' then double click run.sh after that
-- when the Gui is open set the key set the passing grade and things
-- done
+**Alternative: Using the file manager**
+
+Right-click the downloaded AppImage, open **Properties → Permissions**, enable **Allow executing file as program**, then double-click the file to launch it. The exact permission option may vary depending on your Linux desktop environment.
+
+### Using the application
+
+1. Enter your Hack Club AI API key in the application.
+2. Select the folder containing the photos you want to sort.
+3. Press **Grade It**.
+4. Wait for the results.
+5. The application may also recommend renaming your photos. Press **Yes** to rename them using the suggested grade, edit recommendations, and theme.
+
+### Running from source
+
+If you prefer to clone the repository and run the application yourself:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Rahmat-Altamis/ImageRater.git
+   cd ImageRater
+   ```
+
+2. Run the setup script for your operating system.
+
+   **Windows:** Run `run.bat`.
+
+   **Linux:**
+
+   ```bash
+   chmod +x run.sh
+   ./run.sh
+   ```
+
+   These scripts set up the Python environment, install the required dependencies, and launch the application.
+
+3. When the GUI opens, enter your API key, configure the passing grades, and adjust the other settings.
+4. You're done!
 
 ## Catalog
 
-heres the catalog by the names so when u start editing the photo u wont be confused:
+Here's the catalog of classification codes, so you won't be confused when editing your photos.
 
 ### Uses
 
-- `1`: worth posting to social media
-- `2`: worth selling
-- `3`: worth entering in a competition
-- `0`: NOT worth any of the three (every score is under its bar)
+- `1`: Worth posting to social media
+- `2`: Worth selling
+- `3`: Worth entering in a competition
+- `0`: NOT worth any of the three (every score is below its threshold)
 
 ### Worth Bars
 
@@ -53,66 +83,74 @@ heres the catalog by the names so when u start editing the photo u wont be confu
 
 ### Themes
 
-- `a`: abstract  deliberate abstract art / graphics ONLY; never for blurry or unclear photos
-- `b`: product  products, objects, still life
-- `c`: city  buildings / architecture / streets where the PLACE is the subject
-- `f`: food  food and drinks
-- `l`: landscape  scenery, sky, roads, outdoor views with no main person or vehicle
-- `m`: vehicle  cars, motorcycles, racing, panning shots of moving vehicles (even if blurry)
-- `n`: nature  plants, flowers, trees
-- `p`: people  portraits, groups, candid photos of people
-- `s`: sport  sports and action (non-motor)
-- `w`: animal  wildlife, pets, animals
-- `x`: other  screenshots, documents, or anything that fits nothing else
+- `a`: abstract — deliberate abstract art or graphics ONLY; never for blurry or unclear photos
+- `b`: product — products, objects, still life
+- `c`: city — buildings, architecture, and streets where the place is the subject
+- `f`: food — food and drinks
+- `l`: landscape — scenery, sky, roads, and outdoor views with no main person or vehicle
+- `m`: vehicle — cars, motorcycles, racing, and panning shots of moving vehicles (even if blurry)
+- `n`: nature — plants, flowers, trees
+- `p`: people — portraits, groups, and candid photos of people
+- `s`: sport — sports and action (non-motor)
+- `w`: animal — wildlife, pets, and other animals
+- `x`: other — screenshots, documents, or anything that fits nothing else
 
 ### Edits
 
-- `+`: exposure  fix exposure / brightness
-- `~`: color  fix colour / white balance
-- `#`: sharpen  sharpen / reduce noise
-- `^`: crop  crop / straighten / recompose
-- `@`: retouch  remove distractions / retouch
-- `!`: reshoot  major problems, reshoot if possible
-- `=`: none  no edit needed
-- `%`: unclear  edit advice unclear (the AI gave no usable answer)
+- `+`: exposure — fix exposure or brightness
+- `~`: color — fix color or white balance
+- `#`: sharpen — sharpen or reduce noise
+- `^`: crop — crop, straighten, or recompose
+- `@`: retouch — remove distractions or retouch
+- `!`: reshoot — major problems; reshoot if possible
+- `=`: none — no edit needed
+- `%`: unclear — edit advice unclear (the AI gave no usable answer)
 
 ### Edit Hints
 
 - `crop|rotate|straighten|tilt|orient|frame|compos`: `^`
 - `exposure|bright|underexpose|overexpose|shadows|highlights`: `+`
 - `white balance|colour|saturate|tint`: `~`
-- `exposur|bright|underexpos|overexpos|shadows|highlights`: `+`
-- `white balance|colour|saturat|tint`: `~`
 - `sharpen|noise|grain|soft`: `#`
 - `retouch|distract|clone|erase|remove`: `@`
 - `reshoot|retake|unusable`: `!`
 
 ## Features
 
-- grade ur photos for its best use and theme and edit suggestion
-- u could set the minimum passing grade for each style in app UI
-- u could change model and judge model
-- apply judge or not
-- re rate
-- check subfolders
-- there is legends so dont need to open this readme to get the classification
+- Grade your photos for their best use, theme, and suggested edits
+- Set the minimum passing grade for each style in the app UI
+- Change the grading and judge models
+- Enable or disable the judge
+- Re-rate photos
+- Check subfolders
+- View the classification legends in the app without needing to open this README
 
 ## Tech Stack
 
-### Langguage
+### Language
 
 - Python
 
 ### GUI
 
 - PySide6 (Qt for Python)
-  - QWidget
-  - QTableWidget
-  - QThread
+  - `QWidget`
+  - `QTableWidget`
+  - `QThread`
 
 ### AI / API
 
-- Hackclub AI
-- endpoint OpenAI compatible (`/chat/completions`) with base64 image input
-- Model grader: `google/gemini-2.5-flash`
-- Model judge: `z-ai/glm-5.3-flash`
+- Hack Club AI
+- OpenAI-compatible `/chat/completions` endpoint with base64 image input
+- Grader model: `google/gemini-2.5-flash`
+- Judge model: `z-ai/glm-5.3-flash`
+
+## Dependencies
+
+The Python dependencies are listed in [`requirements.txt`](./requirements.txt). The setup scripts install the required packages and prepare the environment.
+
+Python must be installed to run the application from source. The AppImage is intended for Linux users who want to run the packaged application without manually installing the Python dependencies.
+
+## License
+
+This project is licensed under the MIT License. See [`LICENSE`](./LICENSE) for the full license text.

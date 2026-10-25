@@ -10,7 +10,17 @@ Hello everyone good morning/afternoon/evening, so what is PhotoGrading? well let
 
 im in Arch Linux currently, and im lazy to run my VM just for compiling exe/deb so i compile it as appimage which is realy nice, how to run?
 
-- just download the app
+- just download the app [here](https://github.com/Rahmat-Altamis/PhotoGrading/releases/tag/V1.0.0.0)
+- Open a terminal in the directory where you downloaded the file.
+  Make the AppImage executable and run it:
+
+  chmod +x ImageRater.AppImage
+  ./ImageRater.AppImage
+
+  - Alternative: Using the file manager
+    Right-click the downloaded AppImage, open Properties → Permissions, enable Allow executing file as program, then double-click the file to launch it.
+
+Note: The exact permission option may vary depending on your Linux desktop environment.
 - set ur key
 - select the folder with the photo you wanna short
 - press grade it

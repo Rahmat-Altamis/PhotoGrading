@@ -4,9 +4,9 @@ Hello everyone, good morning/afternoon/evening! So, what is PhotoGrading? Well, 
 
 ## App Demo
 
-![PhotoGrading preview](image.png)
+![PhotoGrading preview](./sources/image.png)
 
-[Watch the demo video](./demo.webm)
+[Watch the demo video](./sources/demo.webm)
 
 ## Installation
 
